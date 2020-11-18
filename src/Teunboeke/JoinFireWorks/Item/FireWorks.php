@@ -14,7 +14,7 @@ use pocketmine\nbt\tag\CompoundTag;
 use pocketmine\nbt\tag\ListTag;
 use pocketmine\Player;
 use pocketmine\utils\Random;
-use Teunboeke\fireworks\entity\FireworksRocket;
+use Teunboeke\FireworksRocket\entity\FireworksRocket;
 
 class Fireworks extends item{
 
