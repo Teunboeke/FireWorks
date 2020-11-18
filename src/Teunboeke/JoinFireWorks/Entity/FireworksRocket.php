@@ -60,6 +60,7 @@ class FireworksRocket extends Projectile{
 		    		$this->level->broadcastLevelSoundEvent($this, LevelSoundEventPacket::SOUND_LAUNCH);
 		    		parent::spawnTo($player);
 		    	}
+	
 	    public function despawnFromAll(): void
 		    {    
 		           $this->broadcastEntityEvent(ActorEventPacket::FIREWORK_PARTICLES, 0);
