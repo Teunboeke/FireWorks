@@ -53,3 +53,28 @@ class FireworksRocket extends Projectile{
         
         		$this->lifeTime = 20 * $flyTime + $random->nextBoundedInt(5) + $random->nextBoundedInt(7);
         	}
+
+	    public function spawnTo(Player $player): void
+		     {   
+		    		$this->setMotion($this->getDirectionVector());
+		    		$this->level->broadcastLevelSoundEvent($this, LevelSoundEventPacket::SOUND_LAUNCH);
+		    		parent::spawnTo($player);
+		    	}
+	    public function despawnFromAll(): void
+		    {    
+		           $this->broadcastEntityEvent(ActorEventPacket::FIREWORK_PARTICLES, 0);
+		    
+		parent::despawnFromAll();
+		    
+		    		$this->level->broadcastLevelSoundEvent($this, LevelSoundEventPacket::SOUND_BLAST);
+		    	}
+	
+		public function entityBaseTick(int $tickDiff = 1): bool{
+					if ($this->lifeTime-- < 0){
+								$this->flagForDespawn();	
+									return true;
+								} else{
+									return parent::entityBaseTick($tickDiff);
+								}
+				}
+	}
