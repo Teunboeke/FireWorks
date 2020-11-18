@@ -32,3 +32,10 @@ class Fireworks extends item{
         		$nbt = Entity::createBaseNBT($blockReplace->add(0.5, 0, 0.5), null, $yaw, $pitch);
            	/** @var CompoundTag $tags */
         		$tags = $this->getNamedTagEntry("Fireworks");
+	      		if (!is_null($tags)){
+			$nbt->setTag($tags);
+						}
+				
+	      
+	              $rocket = new FireworksRocket($player->getLevel(), $nbt, $player, $this, $random);
+	              $player->getLevel()->addEntity($rocket);
