@@ -42,3 +42,14 @@ class FireworksRocket extends Projectile{
           $this->getDataPropertyManager()->setItem(16, $this->fireworks);
 
         		$flyTime = 1;
+        
+        		try{
+			if (!is_null($this->namedtag->getCompoundTag("Fireworks")))
+        				if ($this->namedtag->getCompoundTag("Fireworks")->getByte("Flight", 1))
+                  					$flyTime = $this->namedtag->getCompoundTag("Fireworks")->getByte("Flight", 1);
+              		} catch (\Exception $exception){
+              			$this->server->getLogger()->debug($exception);
+              		}
+        
+        		$this->lifeTime = 20 * $flyTime + $random->nextBoundedInt(5) + $random->nextBoundedInt(7);
+        	}
