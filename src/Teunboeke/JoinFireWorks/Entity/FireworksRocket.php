@@ -14,3 +14,14 @@ use xenialdan\fireworks\item\Fireworks;
 
 class FireworksRocket extends Projectile{
   	const NETWORK_ID = self::FIREWORKS_ROCKET;
+  
+  	public $width = 0.25;
+  	public $height = 0.25;
+
+  	public $gravity = 0.0;
+  	public $drag = 0.01;
+  
+  	private $lifeTime = 0;
+  	public $random;
+ /** @var null|Fireworks */
+  	public $fireworks;
