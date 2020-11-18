@@ -36,3 +36,9 @@ class FireworksRocket extends Projectile{
             {
         		parent::initEntity();
         		$random = $this->random ?? new Random();
+        
+        		$this->setGenericFlag(self::DATA_FLAG_HAS_COLLISION, true);
+        		$this->setGenericFlag(self::DATA_FLAG_AFFECTED_BY_GRAVITY, true);
+          $this->getDataPropertyManager()->setItem(16, $this->fireworks);
+
+        		$flyTime = 1;
