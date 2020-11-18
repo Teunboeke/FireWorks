@@ -25,3 +25,14 @@ class FireworksRocket extends Projectile{
   	public $random;
  /** @var null|Fireworks */
   	public $fireworks;
+
+  	public function __construct(Level $level, CompoundTag $nbt, Entity $shootingEntity = null, ?Fireworks $item = null, ?Random $random = null){
+      		$this->random = $random; 
+      		$this->fireworks = $item;
+      		parent::__construct($level, $nbt, $shootingEntity);
+      	} 
+  
+      protected function initEntity(): void
+            {
+        		parent::initEntity();
+        		$random = $this->random ?? new Random();
