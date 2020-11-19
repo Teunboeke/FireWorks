@@ -43,3 +43,17 @@ class Fireworks extends item{
 	      		if ($rocket instanceof Entity){
 			if ($player->isSurvival()){
 								--$this->count;
+						}	
+			$rocket->spawnToAll();
+			return true;	
+						}
+	      		return false;
+	      	}
+	
+		public static function ToNbt(FireworksData $data): CompoundTag{
+					$value = [];
+					$root = new CompoundTag();
+					foreach ($data->explosions as $explosion){
+							$tag = new CompoundTag();
+							$tag->setByteArray("FireworkColor", strval($explosion->fireworkColor[0])); //TODO figure out calculation
+									$tag->setByteArray("FireworkFade", strval($explosion->fireworkFade[0])); //TODO figure out calculation
