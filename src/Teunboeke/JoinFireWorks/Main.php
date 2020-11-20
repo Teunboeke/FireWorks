@@ -6,8 +6,8 @@ use pocketmine\entity\Entity;
 use pocketmine\item\Item;
 use pocketmine\item\ItemFactory;
 use pocketmine\plugin\PluginBase;
-use Teunboeke\JoinFireWorks\entity\FireworksRocket;
-use Teunboeke\JoinFireWorks\item\Fireworks;
+use Teunboeke\JoinFireWorks\Entity\FireworksRocket;
+use Teunboeke\JoinFireWorks\Item\Fireworks;
 
 class Main extends PluginBase{
 
