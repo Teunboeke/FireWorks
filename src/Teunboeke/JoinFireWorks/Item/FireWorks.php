@@ -82,3 +82,7 @@ class FireworksData{
 		/** @var FireworksExplosion[] */
 		public $explosions = [];
 	}
+
+class FireworksExplosion{
+		/** @var int[] count keys = 3 */ //TODO figure out calculation
+		public $fireworkColor = [];
