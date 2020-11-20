@@ -16,7 +16,7 @@ use pocketmine\Player;
 use pocketmine\utils\Random;
 use Teunboeke\FireworksRocket\entity\FireworksRocket;
 
-class Fireworks extends item{
+class FireWorks extends item{
 
   	public $spread = 5.0;
   
