@@ -10,7 +10,7 @@ use pocketmine\network\mcpe\protocol\ActorEventPacket;
 use pocketmine\network\mcpe\protocol\LevelSoundEventPacket;
 use pocketmine\Player;
 use pocketmine\utils\Random;
-use Teunboeke\JoinFireWorks\item\Fireworks;
+use Teunboeke\JoinFireWorks\Item\Fireworks;
 
 class FireworksRocket extends Projectile{
   	const NETWORK_ID = self::FIREWORKS_ROCKET;
