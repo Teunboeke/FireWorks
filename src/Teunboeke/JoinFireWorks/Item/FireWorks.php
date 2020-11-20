@@ -56,4 +56,9 @@ class Fireworks extends item{
 					foreach ($data->explosions as $explosion){
 							$tag = new CompoundTag();
 							$tag->setByteArray("FireworkColor", strval($explosion->fireworkColor[0])); //TODO figure out calculation
-									$tag->setByteArray("FireworkFade", strval($explosion->fireworkFade[0])); //TODO figure out calculation
+							$tag->setByteArray("FireworkFade", strval($explosion->fireworkFade[0])); //TODO figure out calculation
+									$tag->setByte("FireworkFlicker", ($explosion->fireworkFlicker ? 1 : 0));
+									$tag->setByte("FireworkTrail", ($explosion->fireworkTrail ? 1 : 0));
+									$tag->setByte("FireworkType", $explosion->fireworkType);
+									$value[] = $tag;
+								}
