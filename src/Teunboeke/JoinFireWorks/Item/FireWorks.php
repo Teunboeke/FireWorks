@@ -62,3 +62,11 @@ class Fireworks extends item{
 									$tag->setByte("FireworkType", $explosion->fireworkType);
 									$value[] = $tag;
 								}
+
+					$explosions = new ListTag("Explosions", $value, NBT::TAG_Compound);
+					$root->setTag(new CompoundTag("Fireworks",
+								[      
+										$explosions,	
+										new ByteTag("Flight", $data->flight)
+													])
+						      		);
