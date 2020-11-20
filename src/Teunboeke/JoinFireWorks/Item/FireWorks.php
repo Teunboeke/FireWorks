@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Teunboeke\JoinFireWorks\Item
+namespace Teunboeke\JoinFireWorks\Item;
 
 use pocketmine\block\Block;
 use pocketmine\entity\Entity;
