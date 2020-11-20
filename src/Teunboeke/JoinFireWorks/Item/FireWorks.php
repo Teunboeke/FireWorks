@@ -89,7 +89,7 @@ class FireworksExplosion{
 		/** @var int[] count keys = 3 */ //TODO figure out calculation
 		public $fireworkFade = [];
 		/** @var bool */
-	public $fireworkFlicker = false;
+		public $fireworkFlicker = false;
 		/** @var bool */
 		public $fireworkTrail = false;
 		/** @var int */
