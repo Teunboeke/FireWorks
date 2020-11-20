@@ -70,3 +70,8 @@ class Fireworks extends item{
 										new ByteTag("Flight", $data->flight)
 													])
 						      		);
+					
+			return $root;
+	}
+	
+	}
