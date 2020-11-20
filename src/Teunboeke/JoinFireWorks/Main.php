@@ -7,7 +7,7 @@ use pocketmine\item\Item;
 use pocketmine\item\ItemFactory;
 use pocketmine\plugin\PluginBase;
 use Teunboeke\JoinFireWorks\Entity\FireworksRocket;
-use Teunboeke\JoinFireWorks\Item\Fireworks;
+use Teunboeke\JoinFireWorks\Item\FireWorks;
 
 class Main extends PluginBase{
 
