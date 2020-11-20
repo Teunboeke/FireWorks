@@ -1,6 +1,6 @@
 <?php
 
-namespace Teunboeke\JoinFireWorks\Entity
+namespace Teunboeke\JoinFireWorks\Entity;
 
 use pocketmine\entity\Entity; 
 use pocketmine\entity\projectile\Projectile;
