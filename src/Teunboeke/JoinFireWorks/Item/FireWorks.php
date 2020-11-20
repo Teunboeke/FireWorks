@@ -75,3 +75,10 @@ class Fireworks extends item{
 	}
 	
 	}
+
+class FireworksData{
+		/** @var int */
+		public $flight = 1;
+		/** @var FireworksExplosion[] */
+		public $explosions = [];
+	}
